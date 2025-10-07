@@ -1,0 +1,148 @@
+/* Loading */
+@keyframes loading-appear {
+    50% {
+    opacity: 0.95;
+    }
+    99% {
+    z-index: 2;
+    }
+    100% {
+    opacity: 0;
+    z-index: -2;
+    }
+}
+
+@keyframes rotate-gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes icons-appearing {
+    0% {
+        transform: translateY(-150px);
+        opacity: 0;
+        animation-timing-function: cubic-bezier(.5, .78, .83, .67);
+    }
+
+    40% {
+        transform: translateY(-10px);
+        opacity: 1;
+
+    }
+
+    60% {
+        transform: translateY(-10px);
+        opacity: 1;
+
+    }
+
+    67% {
+        transform: rotate(10deg);
+    }
+
+    74% {
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(+150px);
+        opacity: 0;
+        animation-timing-function: cubic-bezier(.5, .78, .83, .67);
+    }
+}
+
+
+/* Courses apparition */
+@keyframes fade-in {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+    }
+}
+
+.fade-in {
+    transform-origin: top;
+    animation: fade-in 2s forwards;
+
+    &--1delay {
+        animation: fade-in 2s 500ms both;
+    }
+
+    &--2delay {
+        animation: fade-in 2s 1000ms both;
+    }
+}
+
+/* Heart fill */
+@keyframes heart-fill {
+    0% {
+        opacity: (0);
+        transform: scale(0.2)
+    }
+
+    15% {
+        opacity: (.25);
+    }
+
+    80% {
+        opacity: (1);
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: (1);
+        transform: scale(1);
+    }
+}
+  /* Décalage progressif */
+@keyframes appear {
+0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+/* Décalage */
+.race-list:nth-child(1) .race-cards {
+animation: appear 1.5s ease forwards;
+animation-delay: 0s;
+opacity: 0;
+}
+
+
+.race-list:nth-child(2) .race-cards {
+animation: appear 1.5s ease forwards;
+animation-delay: 1.5s;
+opacity: 0;
+}
+
+
+.race-list:nth-child(3) .race-cards {
+animation: appear 1.5s ease forwards;
+animation-delay: 3s;
+opacity: 0;
+}
+
